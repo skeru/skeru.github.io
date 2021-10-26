@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{Fisher:1981:TST:1311075.1311325}
+Joseph~A. Fisher.
+\newblock Trace scheduling: A technique for global microcode compaction.
+\newblock {\em IEEE Trans. Comput.}, 30(7):478--490, July 1981.
+
+\bibitem{Thornton:1964:POC:1464039.1464045}
+James~E. Thornton.
+\newblock Parallel operation in the control data 6600.
+\newblock In {\em Proceedings of the October 27-29, 1964, Fall Joint Computer
+  Conference, Part II: Very High Speed Computer Systems}, AFIPS '64 (Fall, part
+  II), pages 33--40, New York, NY, USA, 1965. ACM.
+
+\end{thebibliography}

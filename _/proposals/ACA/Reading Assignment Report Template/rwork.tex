@@ -1,0 +1,12 @@
+In this section, provide a brief summary (5-10 lines) of each surveyed work. 
+Try to stress the key features that differentiate each work from the most obvious solution to the problem addressed.
+You can organize the discussion following the timeline (i.e., listing the works by data), or by thematic groups (this is generally preferable if there clear taxonomical groups emerged in Section~\ref{sec:taxon}.
+% Note the use of \ref{sec:taxon} to refer to the section on taxonomy. You can use this syntax to refer to any numbered item (e.g., figures).
+
+Herebelow is an example of a summary for one of the papers listed in Table~\ref{tab:taxon}.
+You can use it as a guideline for your own entries.
+
+In~\cite{Fisher:1981:TST:1311075.1311325}, the \emph{Trace Scheduling} techniques is introduced to allow instruction scheduling across control flow barriers imposed by branches.
+The proposed technique treats the primary trace, i.e. the most frequently executed sequence of basic blocks in the region, as a single basic block for scheduling purposes.   
+This provides an increase in performance of the scheduler, at the cost of decreased performance for the secondary traces.
+It is worth noting that the technique may fail entirely when the scheduling of the primary trace produces unrecoverable errors in the secondary traces (e.g., when a register used in a secondary trace is overwritten by a non-reversible operation, and its original value is lost).

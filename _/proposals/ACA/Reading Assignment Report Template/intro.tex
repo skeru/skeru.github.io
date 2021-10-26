@@ -1,0 +1,54 @@
+This file provides a brief overview on how to carry out a survey assignment, and how to report on it.
+
+\subsection{Carrying out the survey} % a subsection heading
+The main goal of the survey is to understand the state of the art on a given topic. 
+To this end, you are provided with a starting point, usually a recent paper on the topic. 
+However, you should read more related works.
+To find the relevant works, you can use specialized search engines such as  \href{https://scholar.google.com}{Google Scholar}.
+Furthermore, digital libraries such as the \href{https://dl.acm.org}{ACM Digital Library} or \href{https://ieeexplore.ieee.org}{IEEExplore} will be useful.
+% Note the use of links.
+Please notice that papers of the aforementioned digital libraries are granted for free when you access from the Politecnico di Milano wireless or wired network.
+% Leaving a blank line will start a new paragraph.
+
+First, read the starting point paper(s). 
+From it, you can get relevant keywords, as well as references to related works (there is usually a small review of related literature in each article).
+Then, look for works that cite, are cited by the starting point paper(s). You may also wanto to investigate works done by the same authors of the starting paper(s).
+Extend the set of papers, until you run out of works to read or things start getting out of hand -- if there are too many works in the field, you may want to focus your reading on a specific subset. In this case, in Section~\ref{sec:motiv} clearly state the boundaries you are going to use, and include there a short list of the most relevant works that cover the original assignment, but that you are not going to cover in detail.
+
+When you read a paper, write down a brief summary of its key contributions. 
+An example of paper summary annotation is presented in the Appendix~\ref{sec:append} of this paper.
+This will help later on in writing the report.
+Also, you are welcome to note down relevant keywords, which may help in definining a classification or taxonomy of the works you have surveyed and to look for more relevant works.
+The goal of the survey is to understand which are the main research lines, so a classification of the literature by the chosen approach, sub-problem tackled, or other relevant parameter is necessary.
+
+\subsection{Writing the report}
+When you find a paper, look for its \BibTeX bibliographic record. 
+You will find those in the above-mentioned digital libraries, or, failing that, on \href{http://dblp.uni-trier.de/}{DBLP} or \href{https://scholar.google.com}{Google Scholar}.
+See the \texttt{biblio.bib} file in this folder for an idea of how the \BibTeX files look like.
+You will need to build such a file, in order to record the papers you have read.
+
+Once you have your bibliography, an understanding of its classification, and all the summaries, you are ready to produce your report.
+For this purpose, use the \latex typesetting system~\footnote{See \href{https://en.wikibooks.org/wiki/LaTeX}{https://en.wikibooks.org/wiki/LaTeX}}. % Note the command for footnotes
+This document also serves as a skeleton for your report -- just replace the contents of each \texttt{.tex} file with your text.
+Also, useful information on how to write in \latex is reported in the comments to the source files -- so read them!
+
+In the introduction, you should report a summary of your findings -- write it last, summarizing the contents of Sections~\ref{sec:motiv} and~\ref{sec:taxon}.
+For the remaining sections, read the contents of each of them for an idea of how to write them.
+
+To produce the \texttt{pdf} document out of the \latex sources, run the commands listed in Listing~\ref{lst:latex}.
+
+\begin{listing}
+\begin{lstlisting}[language=Bash]
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
+\end{lstlisting}
+\caption{\label{lst:latex}Commands to generate a \texttt{pdf} file from \latex sources. You need the first run of \texttt{pdflatex} to generate the bibliography references, then the last two to include them and regenerate the internal references in the \texttt{pdf} document.}
+\end{listing}
+
+\subsection{Writing the presentation}
+Finally, in the presentation slides you should cover the same topics, focusing on the motivation and taxonomy. 
+You may want to highlight the contents of a few of the most relevant or recent works as well, but do not go into too many details -- you only have 10/12 slides, of which one half should be spent on motivation, taxonomy, and future directions/conclusions.
+
+You can use \latex for the slides as well -- using the document class \texttt{beamer}~\footnote{See \href{https://en.wikibooks.org/wiki/LaTeX/Presentations}{https://en.wikibooks.org/wiki/LaTeX/Presentations}} -- but this is not required.

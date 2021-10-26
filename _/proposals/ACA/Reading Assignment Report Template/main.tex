@@ -1,0 +1,86 @@
+\documentclass{article}
+% <- this is a comment!
+\usepackage{cite}
+
+% Image inclusion
+\usepackage{graphicx}
+\graphicspath{{./fig/}} % Default path for figures
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+
+% Links
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+% Tables
+\usepackage{booktabs}
+
+% Symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xspace}
+\newcommand{\BibTeX}{\textsc{BibTeX}\xspace} % example of use of xspace to define a BibTeX macro
+\newcommand{\latex}{\LaTeX\xspace}
+
+% Commented text
+\usepackage{comment}
+
+% Packages for source code listings
+\usepackage{listings}		%% source code listings
+\usepackage{newfloat}
+\DeclareFloatingEnvironment{listing}
+\lstset{basicstyle=\footnotesize\ttfamily, %
+columns=fullflexible, %
+numbers=left, %
+xleftmargin=1.5em, %
+framexleftmargin=1.5em, %
+keywordstyle=\color{blue}, %
+stringstyle=\color{PineGreen}, %
+keepspaces=true}
+
+
+\title{A Guide to Survey Assignments % The title of your survey
+%ACA course 2017/18 - project R# - Survey on ... %% please mention project ID and project name 
+}
+\author{G. Agosta, S. Cherubin} % 
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% Section heading. You can use \subsection and \subsubsection to provide further subdivisions
+\section{Introduction}
+% Label definition, you can now refer to the number of this section through \ref{sec:intro} if needed.
+\label{sec:intro}
+% File inclusion. The contents of the Introduction section are in file intro.tex
+\input{intro}
+
+% Note that & is a special character. Escape it with \ to use in text.
+\section{Motivation \& Problem Statement}
+\label{sec:motiv}
+\input{motiv}
+
+\section{Taxonomy/Feature Comparison}
+\label{sec:taxon}
+\input{taxon}
+
+\section{Summary of relevant works}
+\label{sec:rwork}
+\input{rwork}
+
+\section{Conclusions}
+\label{sec:conc}
+\input{conc}
+
+\bibliographystyle{plain}
+\bibliography{biblio}
+
+\newpage
+\appendix
+
+\section{Example of Structured Notes about a Paper}
+\label{sec:append}
+\input{appendix}
+
+\end{document}
+

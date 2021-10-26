@@ -1,0 +1,45 @@
+In this section, lay out the main findings of your reading assignement.
+
+Essentially, you have to classify the works you read according to appropriate criteria. 
+
+For example, if you were doing a survey of instruction scheduling techniques, you would consider as the major distinction whether the scheduling is performed in hardware or in software. 
+
+Within software techniques, you would further classify based on the scope of the scheduling procedure (basic block, a loop, or a generic region).
+
+You may want to provide a table, such as Table~\ref{tab:taxon}.
+% Note the reference and the corresponding label
+
+\begin{table}
+\centering
+\caption{\label{tab:taxon}A Taxonomy Table}
+% "lclp" herebelow refers to the alignment: left, center, left, and wrap text at 0.5 the size of the page
+\begin{tabular}{lclp{0.5\textwidth}}
+\toprule
+Reference & HW/SW & Scope & Other key features \\ % \\ ends a line, & acts as field separator.
+\midrule
+\cite{Thornton:1964:POC:1464039.1464045} & HW & Fixed window & Tomasulo's algorithm \\
+\cite{Fisher:1981:TST:1311075.1311325} & SW & Global & Original trace scheduling algorithm\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Note that you can easily generate a \latex table from Excel or LibreOffice by exporting to CSV (Comma Separated Values) format, then loading the file with a simple Python script, as shown in Listing~\ref{lst:tables}.
+
+\begin{listing}
+\begin{lstlisting}[language=Python]
+#!/usr/bin/python 
+# load argument list and pandas library
+from sys import argv
+import pandas as pd
+# load data from csv file. Filename is the last argument
+data = pd.read_csv(argv[-1])
+# convert data to latex, selecting only the columns you need
+text = data.to_latex(
+	index=False,
+	columns=['column headings', 'you want to appear', 'in the document'])
+# write latex text to a file
+with open('tab.tex', 'w') as f:
+	f.write(text)
+\end{lstlisting}
+\caption{\label{lst:tables}Code to generate a \latex table from a \texttt{.csv} file.}
+\end{listing}
