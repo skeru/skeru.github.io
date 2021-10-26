@@ -1,2 +1,2 @@
-# skeru.github.io
-my public website
+# My public website
+If you're looking for something fancy, keep searching.
